@@ -142,7 +142,10 @@
                           <av:PointCollection x:Key="ConnectorLocation">130,566.333333333334 130,596.333333333334 98.3083333333334,596.333333333334 98.3083333333334,616.333333333333</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Result="{x:Null}" Title="{x:Null}" DisplayName="Year" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Enter year of birth">
+                      <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Year" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Enter year of birth">
+                        <ui:InputDialog.Result>
+                          <OutArgument x:TypeArguments="x:Int32">[yearofbirth]</OutArgument>
+                        </ui:InputDialog.Result>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -304,20 +307,5 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID11</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">430,693.666666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_2">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:MessageBox>
-    </FlowStep>
   </Flowchart>
 </Activity>
